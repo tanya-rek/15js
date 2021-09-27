@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored themes</title>
+    <style>
+        .theme__wrapper {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .default {
+            background-color: white;
+        }
+
+        .dark {
+            background-color: rgb(53, 53, 53);
+        }
+
+        .green {
+            background-color: rgb(84, 148, 98);
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .orange {
+            background-color: rgb(255, 218, 151);
+        }
+
+        .theme__title {
+            margin-top: 30px;
+            font: Arial;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        .theme__options {
+            width: 150px;
+            font: Arial;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        .theme__text {
+            margin-top: 70px;
+            font: Arial;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 60px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div id="background" class="theme__wrapper">
+        <h1 class="theme__title">Select your theme</h1>
+        <select id="color" class="theme__options" onchange="showTheme()">
+            <option value="0">Default</option>
+            <option value="1">Dark</option>
+            <option value="2">Green</option>
+            <option value="3">Pink</option>
+            <option value="4">Orange</option>
+        </select>
+
+        <div class="theme__text">This is my website</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
