@@ -4,36 +4,44 @@ let secondNumber = '';
 function getNumber() {
     firstNumber = document.getElementById("firstNumber").value;
     secondNumber = document.getElementById("secondNumber").value;
+    let errorCode = 0;
 
     if (!firstNumber || isNaN(firstNumber)) {
         alert('Please enter the first number!');
+        errorCode += 1;
     }
 
     if (!secondNumber || isNaN(secondNumber)) {
         alert('Please enter the second number!');
+        errorCode += 1;
     }
+    return errorCode;
 }
 
 function calcSum() {
-    getNumber();
-    document.getElementById('result').value = +firstNumber + +secondNumber;
+    if (getNumber() === 0) {
+        document.getElementById('result').value = Number(firstNumber) + Number(secondNumber);
+    }
 }
 
 function calcDeduction() {
-    getNumber();
-    document.getElementById('result').value =(firstNumber - secondNumber);
+    if (getNumber() === 0) {
+        document.getElementById('result').value = Number(firstNumber) - Number(secondNumber);
+    }
 }
 
 function calcMultiplication() {
-    getNumber();
-    document.getElementById('result').value =(firstNumber * secondNumber);
+    if (getNumber() === 0) {
+        document.getElementById('result').value = Number(firstNumber) * Number(secondNumber);
+    }
 }
 
 function calcDivision() {
-    getNumber();
-    if (+secondNumber === 0) {
-        alert('Divide by zero is forbidden!');
-    } else {
-    document.getElementById('result').value =(+firstNumber / +secondNumber);
+    if (getNumber() === 0) {
+        if (+secondNumber === 0) {
+            alert('Divide by zero is forbidden!');
+        } else {
+        document.getElementById('result').value = Number(firstNumber) / Number(secondNumber);
+        }
     }
 }

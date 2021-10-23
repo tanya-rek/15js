@@ -1,0 +1,49 @@
+.theme__wrapper {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.default {
+    background-color: white;
+}
+
+.dark {
+    background-color: rgb(53, 53, 53);
+}
+
+.green {
+    background-color: rgb(84, 148, 98);
+}
+
+.pink {
+    background-color: pink;
+}
+
+.orange {
+    background-color: rgb(255, 218, 151);
+}
+
+.theme__title {
+    margin-top: 30px;
+    font: Arial;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 3.5em;
+}
+
+.theme__options {
+    width: 150px;
+    font: Arial;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 2.5em;
+}
+
+.theme__text {
+    margin-top: 70px;
+    font: Arial;
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 3.2em;
+}
